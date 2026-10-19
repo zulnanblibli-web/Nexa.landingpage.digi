@@ -1,0 +1,14 @@
+{
+  "name": "nexamind-landingpage",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Landing page katalog produk digital Nexamind.ai (Zulnan Fahrizan).",
+  "type": "module",
+  "scripts": {
+    "start": "npx --yes serve@14.2.4 . -l 4173",
+    "vendor:motion": "npm i motion@13.5.1 --no-save && cp node_modules/motion/dist/motion.js assets/vendor/motion.min.js"
+  },
+  "dependencies": {
+    "motion": "13.5.1"
+  }
+}
