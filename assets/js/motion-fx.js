@@ -85,16 +85,16 @@ function tiles(M) {
   }, 0.25);
 }
 
-/** Kartu produk: masuk dari kanan berurutan. */
+/** Kartu produk: tiap kartu muncul saat terlihat (di carousel maupun daftar vertikal HP). */
 export function productCards(M = window.Motion) {
   const track = document.getElementById("product-track");
   if (!M || !track || prefersReducedMotion()) return;
-  const cards = [...track.querySelectorAll(".pcard")];
-  if (!cards.length) return;
-  once(M, track, () => {
-    M.animate(cards, { opacity: [0, 1], translate: ["80px 0", "0 0"] },
-      { duration: 0.9, delay: M.stagger(0.08), ease: EASE });
-  }, 0.15);
+  [...track.querySelectorAll(".pcard")].forEach((card, i) => {
+    once(M, card, () => {
+      M.animate(card, { opacity: [0, 1], translate: ["60px 0", "0 0"] },
+        { duration: 0.9, delay: (i % 3) * 0.08, ease: EASE });
+    }, 0.12);
+  });
 }
 
 /** Garis titik-titik di "Cara Order" tergambar dari kiri ke kanan. */

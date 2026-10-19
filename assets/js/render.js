@@ -8,7 +8,6 @@ const escapeHtml = (value) =>
     "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;",
   }[ch]));
 
-const CHECK = `<svg viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg>`;
 const ARROW = `<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg>`;
 
 /** "Rp35.000" -> 35000 */
@@ -27,26 +26,23 @@ function productCard(product, index) {
   const badge = product.badge ? `<span class="pcard__badge">${escapeHtml(product.badge)}</span>` : "";
   const save = savings(product);
   const saveTag = save ? `<span class="pcard__save">${save}</span>` : "";
-  const pos = product.imagePos ? ` style="object-position: ${escapeHtml(product.imagePos)}"` : "";
-  const why = (product.benefits || [])
-    .map((b) => `<li>${CHECK}<span>${escapeHtml(b)}</span></li>`)
-    .join("");
-  const tags = (product.tags || []).map((t) => `<li>${escapeHtml(t)}</li>`).join("");
+  const story = (product.story || []).map((para) => `<p>${escapeHtml(para)}</p>`).join("");
   const prefix = product.pricePrefix ? `<small>${escapeHtml(product.pricePrefix)}</small>` : "";
   const was = product.was ? `<s aria-label="Harga normal ${escapeHtml(product.was)}">${escapeHtml(product.was)}</s>` : "";
 
   return `
     <article class="pcard${product.badge === "Paling Hemat" ? " pcard--featured" : ""}" data-i="${index}" aria-labelledby="p-${escapeHtml(product.id)}">
-      <div class="pcard__media">
+      <div class="pcard__media" style="--cover: url('${escapeHtml(new URL(product.image, document.baseURI).href)}')">
         <img src="${escapeHtml(product.image)}" alt="${escapeHtml(product.imageAlt || product.name)}"
-             width="640" height="550" loading="${index < 2 ? "eager" : "lazy"}" decoding="async"${pos}>
+             width="640" height="550" loading="${index < 2 ? "eager" : "lazy"}" decoding="async">
         ${badge}${saveTag}
       </div>
       <div class="pcard__body">
         ${product.kicker ? `<p class="pcard__kicker">${escapeHtml(product.kicker)}</p>` : ""}
         <h3 class="pcard__name" id="p-${escapeHtml(product.id)}">${name}</h3>
-        <ul class="pcard__why" aria-label="Kenapa harus pakai">${why}</ul>
-        ${tags ? `<ul class="pcard__tags" aria-label="Cocok untuk">${tags}</ul>` : ""}
+        ${product.hook ? `<p class="pcard__hook">${escapeHtml(product.hook)}</p>` : ""}
+        <div class="pcard__story">${story}</div>
+        ${product.why ? `<p class="pcard__close">${escapeHtml(product.why)}</p>` : ""}
         <div class="pcard__foot">
           <p class="pcard__price">${prefix}<b>${escapeHtml(product.price)}</b>${was}</p>
           <a class="pcard__cta" href="${escapeHtml(product.url)}" target="_blank" rel="noopener noreferrer"
