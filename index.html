@@ -3,16 +3,16 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Nexamind.ai — Produk Digital AI oleh Zulnan Fahrizan</title>
-<meta name="description" content="Katalog produk digital Nexamind.ai: panduan dan perangkat AI siap pakai dari Zulnan Fahrizan, Digital Creator & AI Builder. Transaksi lewat Lynk.id.">
-<meta name="theme-color" content="#070C18">
+<title>Nexamind.ai — Produk Digital &amp; Tools AI oleh Zulnan Fahrizan</title>
+<meta name="description" content="Katalog produk digital Nexamind.ai: paket edukasi anak, games belajar, generator AI, Mega Bundling, dan jasa website. Dibuat oleh Zulnan Fahrizan, transaksi aman lewat Lynk.id.">
+<meta name="theme-color" content="#05070D">
 <link rel="canonical" href="https://zulnanblibli-web.github.io/Nexa.landingpage.digi/">
-<link rel="icon" href="assets/img/logo-nexamind-280.png" type="image/png">
+<link rel="icon" href="assets/img/logo-mark-176.png" type="image/png">
 
 <meta property="og:type" content="website">
-<meta property="og:title" content="Nexamind.ai — Produk Digital AI oleh Zulnan Fahrizan">
-<meta property="og:description" content="Panduan dan perangkat AI siap pakai. Pelajari, lalu langsung pakai untuk kerja dan karyamu.">
-<meta property="og:image" content="assets/img/logo-nexamind.png">
+<meta property="og:title" content="Nexamind.ai — Produk Digital &amp; Tools AI oleh Zulnan Fahrizan">
+<meta property="og:description" content="Produk digital premium yang siap kamu pakai: edukasi anak, games belajar, generator AI, dan Mega Bundling.">
+<meta property="og:image" content="assets/img/produk/mega-bundling.webp">
 <meta name="twitter:card" content="summary_large_image">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -22,12 +22,11 @@
 
 <script>
   /* Siapkan state animasi sedini mungkin supaya tidak ada kedipan.
-     Failsafe: kalau JS utama gagal dimuat dalam 3 detik, semua konten
-     tetap ditampilkan. */
+     Failsafe: kalau JS utama gagal dimuat dalam 3 detik, semua konten tetap tampil. */
   (function () {
     var root = document.documentElement;
-    var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-    if (reduce) return;
+    root.classList.add("js");
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
     root.classList.add("is-animated");
     setTimeout(function () {
       if (root.dataset.animInit !== "ok") root.classList.remove("is-animated");
@@ -39,204 +38,450 @@
 <body>
 <a class="skip-link" href="#produk">Lewati ke daftar produk</a>
 
-<!-- ══════════════════════════ HERO ══════════════════════════ -->
-<header class="hero section section--dark" id="atas">
-  <div class="aurora" aria-hidden="true">
-    <span class="aurora__blob aurora__blob--a"></span>
-    <span class="aurora__blob aurora__blob--b"></span>
-    <span class="aurora__blob aurora__blob--c"></span>
-    <svg class="aurora__streaks" viewBox="0 0 1440 900" preserveAspectRatio="xMidYMid slice" focusable="false">
-      <defs>
-        <linearGradient id="streak" x1="0" y1="0" x2="1" y2="1">
-          <stop offset="0%" stop-color="#1F6FEB" stop-opacity="0"/>
-          <stop offset="45%" stop-color="#36A7E8" stop-opacity=".55"/>
-          <stop offset="100%" stop-color="#A47BF5" stop-opacity="0"/>
-        </linearGradient>
-      </defs>
-      <g fill="none" stroke="url(#streak)">
-        <path d="M-80 640C240 520 420 760 760 600s430-320 800-250" stroke-width="1.4"/>
-        <path d="M-80 720C260 600 440 840 780 680s430-320 800-250" stroke-width="1"/>
-        <path d="M-80 560C220 440 400 680 740 520s430-320 800-250" stroke-width=".8"/>
-        <path d="M-80 820C280 700 460 940 800 780s430-320 800-250" stroke-width="1.2"/>
-      </g>
-    </svg>
+<!-- ══════════════════════════ NAV ══════════════════════════ -->
+<header class="nav" id="nav">
+  <div class="container nav__inner">
+    <a class="nav__brand" href="#atas" data-scroll aria-label="Nexamind.ai, kembali ke atas">
+      <img src="assets/img/logo-mark-176.png" width="176" height="106" alt="" class="nav__logo"><span class="nav__name">nexamind<i>.ai</i></span>
+    </a>
+    <nav class="nav__links" aria-label="Navigasi utama">
+      <a href="#produk" data-scroll>Produk</a>
+      <a href="#tentang" data-scroll>Tentang</a>
+      <a href="#keunggulan" data-scroll>Keunggulan</a>
+      <a href="#cara-order" data-scroll>Cara Order</a>
+      <a href="#testimoni" data-scroll>Testimoni</a>
+    </nav>
+    <a class="pill pill--ghost nav__cta" href="https://lynk.id/zulnandigipreneur" target="_blank" rel="noopener noreferrer" data-magnetic>
+      Kunjungi Toko
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg>
+    </a>
+    <button class="nav__toggle" type="button" aria-expanded="false" aria-controls="menu" aria-label="Buka menu">
+      <span></span><span></span>
+    </button>
   </div>
-
-  <div class="container hero__inner">
-    <!-- Logo paling atas -->
-    <div class="brand-plate" data-anim="hero" data-anim-i="0">
-      <img class="brand-plate__logo"
-           src="assets/img/logo-nexamind.png"
-           srcset="assets/img/logo-nexamind-280.png 280w, assets/img/logo-nexamind.png 560w"
-           sizes="(max-width: 600px) 148px, 184px"
-           width="560" height="343"
-           alt="Logo Nexamind.ai" fetchpriority="high">
-    </div>
-
-    <div class="hero__grid">
-      <div class="hero__copy">
-        <!-- Perkenalan singkat: foto + nama + peran -->
-        <div class="idcard" data-anim="hero" data-anim-i="1">
-          <span class="idcard__ring">
-            <img class="idcard__photo"
-                 src="assets/img/profile-zulnan-360.webp"
-                 srcset="assets/img/profile-zulnan-360.webp 360w, assets/img/profile-zulnan.webp 720w"
-                 sizes="64px" width="360" height="360"
-                 alt="Foto profil Zulnan Fahrizan, Digital Creator dan AI Builder">
-          </span>
-          <span class="idcard__text">
-            <strong class="idcard__name">Zulnan Fahrizan</strong>
-            <span class="idcard__role">Digital Creator &amp; AI Builder</span>
-          </span>
-        </div>
-
-        <p class="eyebrow" data-anim="hero" data-anim-i="2">Katalog Produk Digital AI</p>
-
-        <h1 class="display" data-anim="hero" data-anim-i="3">
-          Belajar AI Tanpa Ribet,<br>
-          <em>Langsung Bisa Dipakai.</em>
-        </h1>
-
-        <p class="lead" data-anim="hero" data-anim-i="4">
-          Produk digital siap pakai yang membantumu memanfaatkan AI untuk kerja dan karya sehari-hari.
-        </p>
-
-        <p class="hero__intro" data-anim="hero" data-anim-i="5">
-          Saya Zulnan Fahrizan, Digital Creator &amp; AI Builder dengan latar Sales Development
-          dan Digital Marketing. Saya meramu apa yang saya pelajari jadi produk digital yang
-          ringkas dan bisa langsung dipraktikkan, supaya kamu lebih cepat paham AI dan memakainya
-          untuk kebutuhanmu sendiri.
-        </p>
-
-        <div class="hero__actions" data-anim="hero" data-anim-i="6">
-          <a class="btn btn--primary btn--pulse" href="#produk" data-scroll>
-            Lihat Semua Produk
-            <svg class="btn__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12l7 7 7-7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          </a>
-          <a class="btn btn--ghost" href="#tentang" data-scroll>Kenalan Dulu</a>
-        </div>
-      </div>
-
-      <figure class="hero__visual" data-anim="hero" data-anim-i="7">
-        <div class="hero__visual-glow" aria-hidden="true"></div>
-        <img src="assets/img/hero-workspace.webp"
-             srcset="assets/img/hero-workspace-760.webp 760w, assets/img/hero-workspace.webp 1200w"
-             sizes="(max-width: 900px) 92vw, 520px"
-             width="1200" height="1000"
-             alt="Zulnan Fahrizan mengenakan jas hitam sedang bekerja di depan laptop"
-             fetchpriority="high">
-      </figure>
-    </div>
-  </div>
-
-  <div class="wave wave--to-light" aria-hidden="true">
-    <svg viewBox="0 0 1440 120" preserveAspectRatio="none" focusable="false">
-      <path d="M0 64c180-44 340-52 520-24s330 60 520 28 300-56 400-44v96H0z"/>
-    </svg>
+  <div class="menu" id="menu" hidden>
+    <a href="#produk" data-scroll>Produk</a>
+    <a href="#tentang" data-scroll>Tentang</a>
+    <a href="#keunggulan" data-scroll>Keunggulan</a>
+    <a href="#cara-order" data-scroll>Cara Order</a>
+    <a href="#testimoni" data-scroll>Testimoni</a>
+    <a class="pill pill--light" href="https://lynk.id/zulnandigipreneur" target="_blank" rel="noopener noreferrer">Kunjungi Toko di Lynk.id</a>
   </div>
 </header>
 
+<!-- Indikator bagian (desktop) -->
+<nav class="rail" aria-label="Posisi halaman">
+  <a href="#atas" data-scroll aria-label="Beranda"></a>
+  <a href="#tentang" data-scroll aria-label="Tentang"></a>
+  <a href="#keunggulan" data-scroll aria-label="Keunggulan"></a>
+  <a href="#produk" data-scroll aria-label="Produk"></a>
+  <a href="#cara-order" data-scroll aria-label="Cara Order"></a>
+  <a href="#testimoni" data-scroll aria-label="Testimoni"></a>
+</nav>
+
 <main>
-  <!-- ══════════════════════════ TENTANG ══════════════════════════ -->
-  <section class="section section--light about" id="tentang">
-    <div class="container">
-      <div class="about__grid">
-        <figure class="portrait" data-anim="up">
-          <span class="portrait__ring" aria-hidden="true"></span>
-          <img class="portrait__img"
-               src="assets/img/profile-zulnan.webp"
-               srcset="assets/img/profile-zulnan-360.webp 360w, assets/img/profile-zulnan.webp 720w"
-               sizes="(max-width: 760px) 240px, 320px"
-               width="720" height="720"
-               alt="Potret Zulnan Fahrizan, Digital Creator dan AI Builder di balik Nexamind.ai">
-        </figure>
+  <!-- ══════════════════════════ HERO ══════════════════════════ -->
+  <section class="hero dark" id="atas">
+    <svg class="ribbons ribbons--hero" viewBox="0 0 1440 900" preserveAspectRatio="xMidYMid slice" aria-hidden="true" focusable="false">
+      <defs>
+        <linearGradient id="rb-a" x1="0" y1="0" x2="1" y2="0">
+          <stop offset="0" stop-color="#0B3BA8" stop-opacity="0"/>
+          <stop offset=".45" stop-color="#2F7BFF" stop-opacity=".9"/>
+          <stop offset="1" stop-color="#7FB4FF" stop-opacity=".15"/>
+        </linearGradient>
+        <linearGradient id="rb-fill" x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0" stop-color="#0A2A7A" stop-opacity="0"/>
+          <stop offset=".55" stop-color="#1450D8" stop-opacity=".55"/>
+          <stop offset="1" stop-color="#0A2A7A" stop-opacity="0"/>
+        </linearGradient>
+        <linearGradient id="rb-sheet" x1="0" y1="0" x2="1" y2="0">
+          <stop offset="0" stop-color="#1450D8" stop-opacity="0"/>
+          <stop offset=".35" stop-color="#1F5FD6" stop-opacity=".55"/>
+          <stop offset=".7" stop-color="#2F7BFF" stop-opacity=".35"/>
+          <stop offset="1" stop-color="#2F7BFF" stop-opacity="0"/>
+        </linearGradient>
+        <filter id="rb-glow" x="-20%" y="-20%" width="140%" height="140%"><feGaussianBlur stdDeviation="6"/></filter>
+        <filter id="rb-soft" x="-10%" y="-30%" width="120%" height="160%"><feGaussianBlur stdDeviation="18"/></filter>
+      </defs>
+      <g class="ribbons__drift">
+        <path d="M420 900C660 780 840 560 1050 500s330-40 470-170v120C1380 560 1180 600 980 660S640 860 560 900z" fill="url(#rb-sheet)" filter="url(#rb-soft)"/>
+        <path d="M470 900C700 790 880 590 1080 540s320-50 440-150v50C1390 540 1200 590 1010 640S700 850 600 900z" fill="url(#rb-sheet)" opacity=".8"/>
+        <path d="M560 720C780 610 880 420 1060 360s290 30 440-80" fill="none" stroke="url(#rb-a)" stroke-width="10" filter="url(#rb-glow)" opacity=".7"/>
+        <path d="M560 720C780 610 880 420 1060 360s290 30 440-80" fill="none" stroke="url(#rb-a)" stroke-width="2"/>
+        <path d="M600 820C820 700 940 500 1100 460s280 20 420-40" fill="none" stroke="url(#rb-a)" stroke-width="1.4" opacity=".7"/>
+        <path d="M660 300C820 240 980 120 1180 160s220 120 300 60" fill="none" stroke="url(#rb-a)" stroke-width="1.2" opacity=".5"/>
+      </g>
+    </svg>
 
-        <div class="about__copy">
-          <p class="eyebrow eyebrow--ink" data-anim="up" data-anim-i="1">Tentang Saya</p>
-          <h2 class="h2" data-anim="up" data-anim-i="2">
-            Belajar AI itu <em>harusnya sederhana.</em>
-          </h2>
-          <p class="body-lg" data-anim="up" data-anim-i="3">
-            Lewat Nexamind.ai saya mengemas hal-hal yang saya pelajari soal AI jadi produk digital
-            yang ringkas. Tidak bertele-tele, tidak penuh istilah rumit — cukup dibaca, dicoba,
-            lalu dipakai untuk pekerjaanmu sendiri.
-          </p>
-
-          <ul class="chips" data-anim="up" data-anim-i="4">
-            <li class="chip">Digital Creator &amp; AI Builder</li>
-            <li class="chip">Sales Development</li>
-            <li class="chip">Digital Marketer</li>
-          </ul>
-
-          <a class="btn btn--primary" href="#produk" data-scroll data-anim="up" data-anim-i="5">
-            Jelajahi Katalog
+    <div class="container hero__grid">
+      <div class="hero__copy">
+        <p class="eyebrow" data-anim="hero" data-anim-i="0">Digital Creator &amp; AI Builder</p>
+        <h1 class="hero__title" data-anim="hero" data-anim-i="1">
+          Meracik Produk<br>
+          Digital <span class="blue">Premium</span><br>
+          yang <em>Siap Dipakai</em>
+        </h1>
+        <p class="hero__lead" data-anim="hero" data-anim-i="2">
+          Saya Zulnan Fahrizan. Lewat Nexamind.ai saya membuat paket edukasi anak, games belajar,
+          dan tools AI yang ringkas, rapi, dan bisa langsung kamu pakai hari ini.
+        </p>
+        <div class="hero__actions" data-anim="hero" data-anim-i="3">
+          <a class="pill pill--ghost" href="#produk" data-scroll data-magnetic>
+            Lihat Produk
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
           </a>
         </div>
       </div>
-    </div>
 
-    <div class="wave wave--to-dark" aria-hidden="true">
-      <svg viewBox="0 0 1440 120" preserveAspectRatio="none" focusable="false">
-        <path d="M0 56c200 56 380 58 560 26s340-66 520-38 260 58 360 50v26H0z"/>
-      </svg>
+      <div class="hero__visual" data-anim="hero" data-anim-i="2" aria-hidden="true">
+        <!-- Ponsel 1: ringkasan -->
+        <div class="phone phone--back">
+          <div class="phone__screen">
+            <div class="ph-status"><span>9:41</span><span class="ph-dots"></span></div>
+            <p class="ph-hi">Hai, Sobat Nexa</p>
+            <p class="ph-sub">Mau belajar apa hari ini?</p>
+            <div class="ph-stat">
+              <span class="ph-stat__label">Ringkasan Koleksi</span>
+              <svg class="ph-spark" viewBox="0 0 120 40"><path d="M2 34 18 28l14 4 14-12 14 6 14-14 14 8 14-16 14 4"/></svg>
+              <div class="ph-stat__card">
+                <span>Total produk digital</span>
+                <b>700+</b>
+              </div>
+            </div>
+            <p class="ph-h">Paket Saya</p>
+            <div class="ph-cards">
+              <span class="ph-chip ph-chip--a">Paket 1</span>
+              <span class="ph-chip ph-chip--b">Mega</span>
+            </div>
+          </div>
+        </div>
+        <!-- Ponsel 2: jelajahi -->
+        <div class="phone phone--front">
+          <div class="phone__screen">
+            <div class="ph-status"><span>9:41</span><span class="ph-dots"></span></div>
+            <p class="ph-hi">Jelajahi</p>
+            <p class="ph-h">Pilihan Unggulan</p>
+            <div class="ph-feature">
+              <img src="assets/img/produk/mega-bundling.webp" alt="" width="413" height="412" fetchpriority="high">
+              <span>Mega Bundling</span>
+            </div>
+            <p class="ph-h">Kategori</p>
+            <div class="ph-cats">
+              <i>Edukasi</i><i>Games</i><i>AI</i><i>Web</i>
+            </div>
+            <p class="ph-h">Pilihan Hari Ini</p>
+            <div class="ph-thumbs">
+              <img src="assets/img/produk/paket-1-edukasi-anak.webp" alt="" width="413" height="414">
+              <img src="assets/img/produk/paket-2-belajar-bermain.webp" alt="" width="401" height="398">
+            </div>
+          </div>
+        </div>
+        <div class="avail">
+          <span class="avail__dot"></span>
+          <span>Promo aktif<br><small>mulai Rp35.000</small></span>
+        </div>
+      </div>
     </div>
   </section>
 
-  <!-- ══════════════════════════ KATALOG PRODUK ══════════════════════════ -->
-  <div id="produk">
-    <noscript>
-      <section class="section section--dark">
-        <div class="container">
-          <h2 class="h2">Katalog Produk</h2>
-          <p class="lead">Aktifkan JavaScript untuk melihat katalog, atau buka tokonya langsung.</p>
-          <a class="btn btn--primary" href="https://lynk.id/zulnandigipreneur" target="_blank" rel="noopener noreferrer">Buka Toko di Lynk.id</a>
-        </div>
-      </section>
-    </noscript>
-    <!-- Bagian kategori & kartu produk dirender dari assets/js/data/products.js -->
-  </div>
-
-  <!-- ══════════════════════════ PENUTUP ══════════════════════════ -->
-  <section class="section section--dark closing" id="penutup">
-    <div class="aurora aurora--soft" aria-hidden="true">
-      <span class="aurora__blob aurora__blob--a"></span>
-      <span class="aurora__blob aurora__blob--c"></span>
+  <!-- ══════════════════════════ TENTANG (pita terang) ══════════════════════════ -->
+  <section class="band" id="tentang">
+    <svg class="band__edge band__edge--top" viewBox="0 0 1440 160" preserveAspectRatio="none" aria-hidden="true" focusable="false">
+      <path class="band__shade" d="M0 120C220 40 420 10 640 50s420 120 640 70 160-60 160-60v100H0z"/>
+      <path d="M0 140C260 70 460 40 700 80s420 100 600 60 140-40 140-40v60H0z"/>
+      <path class="band__glow" d="M0 140C260 70 460 40 700 80s420 100 600 60 140-40 140-40"/>
+    </svg>
+    <div class="container about">
+      <figure class="about__portrait" data-anim="scale">
+        <img src="assets/img/portrait-ink.webp"
+             srcset="assets/img/portrait-ink-480.webp 480w, assets/img/portrait-ink.webp 900w"
+             sizes="(max-width: 760px) 300px, 460px"
+             width="900" height="900" loading="lazy" decoding="async"
+             alt="Potret Zulnan Fahrizan bergaya cat air hitam putih dengan percikan tinta biru">
+      </figure>
+      <div class="about__copy">
+        <p class="eyebrow" data-anim="up">Tentang Saya</p>
+        <h2 class="serif-h" data-anim="up" data-anim-i="1">
+          AI adalah alat saya.<br>
+          Membantumu adalah<br>
+          <em>tujuan saya.</em>
+        </h2>
+        <p class="about__text" data-anim="up" data-anim-i="2">
+          Saya Zulnan Fahrizan, Digital Creator &amp; AI Builder dengan latar Sales Development dan
+          Digital Marketing. Saya meramu apa yang saya pelajari jadi produk digital yang ringkas dan
+          bisa langsung dipraktikkan, untuk orang tua, guru, dan kreator.
+        </p>
+        <dl class="stats" data-anim="up" data-anim-i="3">
+          <div><dt>Produk digital</dt><dd><span data-count="700">700</span>+</dd></div>
+          <div><dt>Printable bonus</dt><dd><span data-count="39000" data-format="id">39.000</span></dd></div>
+          <div><dt>Website sudah jadi</dt><dd><span data-count="5">5</span>+</dd></div>
+        </dl>
+      </div>
     </div>
-    <div class="container closing__inner">
-      <p class="eyebrow" data-anim="up">Siap Mulai?</p>
-      <h2 class="h2 closing__title" data-anim="up" data-anim-i="1">
-        Semua produk ada di <em>satu toko.</em>
-      </h2>
-      <p class="lead closing__lead" data-anim="up" data-anim-i="2">
-        Seluruh produk berbentuk digital dan transaksinya diproses lewat Lynk.id,
-        platform resmi tempat produk ini dijual.
-      </p>
-      <a class="btn btn--primary btn--lg btn--pulse"
-         href="https://lynk.id/zulnandigipreneur"
-         target="_blank" rel="noopener noreferrer"
-         data-anim="up" data-anim-i="3">
-        Kunjungi Toko Nexamind.ai
-        <svg class="btn__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-      </a>
+    <svg class="band__edge band__edge--bottom" viewBox="0 0 1440 160" preserveAspectRatio="none" aria-hidden="true" focusable="false">
+      <path class="band__shade" d="M0 0h1440v40c-200 70-420 100-660 60S300 0 0 90z"/>
+      <path d="M0 0h1440v20c-220 80-440 90-680 50S280 10 0 70z"/>
+    </svg>
+  </section>
+
+  <!-- ══════════════════════════ KEUNGGULAN ══════════════════════════ -->
+  <section class="dark skills" id="keunggulan">
+    <svg class="ribbons ribbons--skills" viewBox="0 0 1440 700" preserveAspectRatio="xMidYMid slice" aria-hidden="true" focusable="false">
+      <g class="ribbons__drift ribbons__drift--slow" fill="none" stroke="url(#rb-a)">
+        <path d="M-40 520C240 420 420 600 700 470s420-300 780-200" stroke-width="2" opacity=".55"/>
+        <path d="M-40 560C260 460 440 640 720 510s420-300 780-200" stroke-width="8" filter="url(#rb-glow)" opacity=".35"/>
+        <path d="M-40 600C280 500 460 680 740 550s420-300 780-200" stroke-width="1" opacity=".4"/>
+      </g>
+    </svg>
+    <div class="container skills__grid">
+      <div class="skills__copy">
+        <p class="eyebrow" data-anim="up">Keunggulan</p>
+        <h2 class="serif-h serif-h--light" data-anim="up" data-anim-i="1">
+          Dibuat dengan<br><em>sepenuh hati.</em>
+        </h2>
+        <p class="muted" data-anim="up" data-anim-i="2">
+          Setiap paket disusun supaya langsung bisa dipakai: materi rapi, file siap unduh,
+          dan ada tutorial serta komunitas yang menemani.
+        </p>
+      </div>
+      <div class="tiles">
+        <div class="tile tile--hero" data-float="0">
+          <img src="assets/img/logo-mark-176.png" width="176" height="106" alt="" class="tile__logo">
+          <b>Mega Bundling</b>
+          <span class="tile__bar"><i style="--w: 100%"></i></span>
+          <small>Paket 1–3 lengkap</small>
+        </div>
+        <div class="tile" data-float="1" style="--x: 0; --y: 0">
+          <span class="tile__ico tile__ico--teal"><svg viewBox="0 0 24 24"><path d="M4 19.5V5a2 2 0 0 1 2-2h13v15H6.5A2.5 2.5 0 0 0 4 20.5 2.5 2.5 0 0 0 6.5 23H19"/></svg></span>
+          <b>Edukasi Anak</b><small>700+ produk</small>
+          <span class="tile__bar"><i style="--w: 92%"></i></span>
+        </div>
+        <div class="tile" data-float="2">
+          <span class="tile__ico tile__ico--amber"><svg viewBox="0 0 24 24"><path d="M14 3v5h5M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8zM9 13h6M9 17h4"/></svg></span>
+          <b>Worksheet</b><small>4000+ siap cetak</small>
+          <span class="tile__bar"><i style="--w: 86%"></i></span>
+        </div>
+        <div class="tile" data-float="3">
+          <span class="tile__ico tile__ico--violet"><svg viewBox="0 0 24 24"><path d="M12 3l1.9 5.1L19 10l-5.1 1.9L12 17l-1.9-5.1L5 10l5.1-1.9z"/></svg></span>
+          <b>Generator AI</b><small>Soal, modul, VO</small>
+          <span class="tile__bar"><i style="--w: 80%"></i></span>
+        </div>
+        <div class="tile" data-float="4">
+          <span class="tile__ico tile__ico--blue"><svg viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="12" rx="4"/><path d="M7 11v4M5 13h4M15.5 12h.01M18 14h.01"/></svg></span>
+          <b>Games Anak</b><small>Bonus 16 games</small>
+          <span class="tile__bar"><i style="--w: 74%"></i></span>
+        </div>
+        <div class="tile" data-float="5">
+          <span class="tile__ico tile__ico--cyan"><svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2M9 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg></span>
+          <b>Komunitas</b><small>Update seputar AI</small>
+          <span class="tile__bar"><i style="--w: 88%"></i></span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════ PRODUK ══════════════════════════ -->
+  <section class="dark products" id="produk" aria-labelledby="produk-judul">
+    <div class="container products__grid">
+      <div class="products__copy">
+        <p class="eyebrow" data-anim="up">Katalog Produk</p>
+        <h2 class="serif-h serif-h--light" id="produk-judul" data-anim="up" data-anim-i="1">
+          Produk digital <span class="slash">/</span><br>yang bikin <em>beda.</em>
+        </h2>
+        <p class="muted" data-anim="up" data-anim-i="2">
+          Pilih paket sesuai kebutuhanmu. Klik tombolnya untuk langsung membuka produk di Lynk.id.
+        </p>
+        <a class="pill pill--ghost" href="https://lynk.id/zulnandigipreneur" target="_blank" rel="noopener noreferrer" data-magnetic data-anim="up" data-anim-i="3">
+          Lihat Semua di Lynk.id
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg>
+        </a>
+      </div>
+      <div class="carousel" data-anim="up" data-anim-i="2">
+        <div class="carousel__track" id="product-track" tabindex="0" aria-label="Daftar produk, geser ke samping">
+          <noscript>
+            <p class="muted">Aktifkan JavaScript untuk melihat katalog, atau
+              <a href="https://lynk.id/zulnandigipreneur">buka toko di Lynk.id</a>.</p>
+          </noscript>
+        </div>
+        <div class="carousel__nav">
+          <button class="round-btn" type="button" data-dir="-1" aria-label="Produk sebelumnya" aria-controls="product-track">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19 12H5M11 6l-6 6 6 6"/></svg>
+          </button>
+          <span class="carousel__count" aria-live="polite"><b data-current>1</b> / <span data-total>5</span></span>
+          <button class="round-btn" type="button" data-dir="1" aria-label="Produk berikutnya" aria-controls="product-track">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════ CARA ORDER (pita terang) ══════════════════════════ -->
+  <section class="band band--steps" id="cara-order">
+    <svg class="band__edge band__edge--top" viewBox="0 0 1440 160" preserveAspectRatio="none" aria-hidden="true" focusable="false">
+      <path class="band__shade" d="M0 60c240 80 480 100 720 50s480-110 720-40v90H0z"/>
+      <path d="M0 90c260 60 500 70 740 30s460-90 700-30v70H0z"/>
+      <path class="band__glow" d="M0 90c260 60 500 70 740 30s460-90 700-30"/>
+    </svg>
+    <div class="container">
+      <div class="steps__head">
+        <p class="eyebrow" data-anim="up">Cara Order</p>
+        <h2 class="serif-h" data-anim="up" data-anim-i="1">Langkah mudah<br><em>mendapatkan produk.</em></h2>
+      </div>
+      <div class="steps-wrap">
+      <svg class="steps__path" viewBox="0 0 1000 120" preserveAspectRatio="none" aria-hidden="true" focusable="false">
+        <path d="M60 60C200 10 300 110 375 60S560 10 625 60 800 110 940 60"/>
+      </svg>
+      <ol class="steps">
+        <li class="step" data-anim="up" data-anim-i="0">
+          <span class="step__ico"><svg viewBox="0 0 24 24"><path d="M3 7h18M3 12h18M3 17h12"/></svg></span>
+          <span class="step__no">Langkah 01</span>
+          <h3>Pilih Paket</h3>
+          <p>Pilih paket sesuai kebutuhanmu. Paling hemat: Mega Bundling.</p>
+        </li>
+        <li class="step" data-anim="up" data-anim-i="1">
+          <span class="step__ico"><svg viewBox="0 0 24 24"><path d="M9 11V6a3 3 0 0 1 6 0v5M5 11h14l-1 10H6z"/></svg></span>
+          <span class="step__no">Langkah 02</span>
+          <h3>Klik Beli</h3>
+          <p>Kamu akan diarahkan ke halaman pembayaran aman Lynk.id.</p>
+        </li>
+        <li class="step" data-anim="up" data-anim-i="2">
+          <span class="step__ico"><svg viewBox="0 0 24 24"><rect x="2" y="5" width="20" height="14" rx="3"/><path d="M2 10h20M6 15h4"/></svg></span>
+          <span class="step__no">Langkah 03</span>
+          <h3>Bayar</h3>
+          <p>Pilih metode pembayaran (transfer bank, e-wallet, dll) lalu selesaikan.</p>
+        </li>
+        <li class="step step--on" data-anim="up" data-anim-i="3">
+          <span class="step__ico"><svg viewBox="0 0 24 24"><path d="M13 2 4 14h7l-1 8 9-12h-7z"/></svg></span>
+          <span class="step__no">Langkah 04</span>
+          <h3>Akses Instan</h3>
+          <p>File produk dan link komunitas otomatis dikirim ke email kamu.</p>
+        </li>
+      </ol>
+      </div>
+    </div>
+    <svg class="band__edge band__edge--bottom" viewBox="0 0 1440 160" preserveAspectRatio="none" aria-hidden="true" focusable="false">
+      <path class="band__shade" d="M0 0h1440v70c-240 60-480 40-720-10S240 20 0 80z"/>
+      <path d="M0 0h1440v40c-240 60-480 50-720 0S240 0 0 60z"/>
+    </svg>
+  </section>
+
+  <!-- ══════════════════════════ TESTIMONI ══════════════════════════ -->
+  <section class="dark testi" id="testimoni" aria-labelledby="testi-judul">
+    <div class="container">
+      <div class="testi__head">
+        <p class="eyebrow" data-anim="up">Testimoni</p>
+        <h2 class="serif-h serif-h--light" id="testi-judul" data-anim="up" data-anim-i="1">Kata mereka yang<br><em>sudah merasakan.</em></h2>
+      </div>
+      <div class="testi__stage" data-anim="up" data-anim-i="2">
+        <div class="testi__track">
+          <figure class="quote" data-i="0">
+            <svg class="quote__mark" viewBox="0 0 32 24" aria-hidden="true"><path d="M0 24V14C0 6 4 1 12 0l1 4c-4 1-6 4-6 8h6v12zm18 0V14c0-8 4-13 12-14l1 4c-4 1-6 4-6 8h6v12z"/></svg>
+            <blockquote>Sangat terbantu sebagai guru TK! Worksheetnya lengkap banget, anak-anak jadi lebih antusias belajar. Nyesel gak beli Mega Bundling dari awal.</blockquote>
+            <figcaption><span class="quote__av">SR</span><span><b>Siti Rahma</b><small>Guru PAUD</small></span></figcaption>
+          </figure>
+          <figure class="quote" data-i="1">
+            <svg class="quote__mark" viewBox="0 0 32 24" aria-hidden="true"><path d="M0 24V14C0 6 4 1 12 0l1 4c-4 1-6 4-6 8h6v12zm18 0V14c0-8 4-13 12-14l1 4c-4 1-6 4-6 8h6v12z"/></svg>
+            <blockquote>Generator AI-nya bikin hemat waktu bikin modul. Sisa waktunya bisa belajar jualan pakai tutorial bonusnya. Recommended buat pemula!</blockquote>
+            <figcaption><span class="quote__av">AS</span><span><b>Andi Saputra</b><small>Digital Creator</small></span></figcaption>
+          </figure>
+          <figure class="quote" data-i="2">
+            <svg class="quote__mark" viewBox="0 0 32 24" aria-hidden="true"><path d="M0 24V14C0 6 4 1 12 0l1 4c-4 1-6 4-6 8h6v12zm18 0V14c0-8 4-13 12-14l1 4c-4 1-6 4-6 8h6v12z"/></svg>
+            <blockquote>Anak saya jadi suka banget sama game Islaminya. Belajar agama jadi interaktif. Pembelian sangat mudah dan file langsung bisa diakses.</blockquote>
+            <figcaption><span class="quote__av">BA</span><span><b>Bunda Aisha</b><small>Ibu Rumah Tangga</small></span></figcaption>
+          </figure>
+        </div>
+        <div class="testi__dots" role="tablist" aria-label="Pilih testimoni">
+          <button type="button" role="tab" aria-selected="true" aria-label="Testimoni 1"></button>
+          <button type="button" role="tab" aria-selected="false" aria-label="Testimoni 2"></button>
+          <button type="button" role="tab" aria-selected="false" aria-label="Testimoni 3"></button>
+        </div>
+        <div class="testi__ring" aria-hidden="true"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════ PENUTUP (pita terang) ══════════════════════════ -->
+  <section class="band band--cta" id="mulai">
+    <svg class="band__edge band__edge--top" viewBox="0 0 1440 160" preserveAspectRatio="none" aria-hidden="true" focusable="false">
+      <path class="band__shade" d="M0 100C240 30 520 20 760 70s460 90 680 20v70H0z"/>
+      <path d="M0 120C260 60 520 50 760 90s460 70 680 10v60H0z"/>
+      <path class="band__glow" d="M0 120C260 60 520 50 760 90s460 70 680 10"/>
+    </svg>
+    <div class="container cta">
+      <div class="cta__copy">
+        <p class="eyebrow" data-anim="up">Siap Mulai?</p>
+        <h2 class="serif-h" data-anim="up" data-anim-i="1">Siap memulai<br><em>langkah pertamamu?</em></h2>
+      </div>
+      <div class="cta__side" data-anim="up" data-anim-i="2">
+        <p>Semua produk berbentuk digital dan transaksinya diproses aman lewat Lynk.id, platform resmi tempat produk ini dijual.</p>
+        <a class="pill pill--dark" href="https://lynk.id/zulnandigipreneur" target="_blank" rel="noopener noreferrer" data-magnetic>
+          Kunjungi Toko
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22 2 11 13M22 2l-7 20-4-9-9-4z"/></svg>
+        </a>
+      </div>
+      <div class="cta__orb" aria-hidden="true">
+        <span class="cta__ring cta__ring--a"></span>
+        <span class="cta__ring cta__ring--b"></span>
+        <img src="assets/img/logo-nexamind-280.png" width="280" height="172" alt="" class="cta__logo">
+      </div>
     </div>
   </section>
 </main>
 
 <!-- ══════════════════════════ FOOTER ══════════════════════════ -->
-<footer class="footer section--dark">
-  <div class="container footer__inner">
+<footer class="footer dark">
+  <div class="container footer__grid">
     <div class="footer__brand">
-      <img src="assets/img/logo-nexamind-280.png" width="280" height="172"
-           alt="Logo Nexamind.ai" loading="lazy" class="footer__logo">
+      <img src="assets/img/logo-mark-176.png" width="176" height="106" alt="" loading="lazy">
+      <span><b>Nexamind.ai</b><small>Zulnan Fahrizan</small></span>
     </div>
-    <p class="footer__meta">
-      <span>Nexamind.ai — Zulnan Fahrizan</span>
-      <span class="footer__dot" aria-hidden="true">•</span>
+    <div>
+      <h3>Navigasi</h3>
+      <ul>
+        <li><a href="#produk" data-scroll>Produk</a></li>
+        <li><a href="#tentang" data-scroll>Tentang</a></li>
+        <li><a href="#keunggulan" data-scroll>Keunggulan</a></li>
+        <li><a href="#cara-order" data-scroll>Cara Order</a></li>
+        <li><a href="#testimoni" data-scroll>Testimoni</a></li>
+      </ul>
+    </div>
+    <div>
+      <h3>Produk</h3>
+      <ul data-product-links></ul>
+    </div>
+    <div>
+      <h3>Terhubung</h3>
+      <ul>
+        <li><a href="https://www.instagram.com/zfahrizan/" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+        <li><a href="https://www.tiktok.com/@zulnandigipreneur" target="_blank" rel="noopener noreferrer">TikTok</a></li>
+        <li><a href="https://lynk.id/zulnandigipreneur" target="_blank" rel="noopener noreferrer">Lynk.id</a></li>
+      </ul>
+    </div>
+    <div class="footer__pitch">
+      <p>Mari bertumbuh bersama AI.</p>
       <a href="https://lynk.id/zulnandigipreneur" target="_blank" rel="noopener noreferrer">lynk.id/zulnandigipreneur</a>
-    </p>
-    <p class="footer__copy">&copy; <span data-year>2026</span> Nexamind.ai. Seluruh hak cipta dilindungi.</p>
+      <div class="footer__social">
+        <a href="https://www.instagram.com/zfahrizan/" target="_blank" rel="noopener noreferrer" aria-label="Instagram @zfahrizan">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><path d="M17.5 6.5h.01"/></svg>
+        </a>
+        <a href="https://www.tiktok.com/@zulnandigipreneur" target="_blank" rel="noopener noreferrer" aria-label="TikTok @zulnandigipreneur">
+          <svg viewBox="0 0 24 24" aria-hidden="true" class="fill"><path d="M16.6 5.82A4.28 4.28 0 0 1 15.54 3h-3.09v12.4a2.59 2.59 0 0 1-2.59 2.5c-1.42 0-2.6-1.16-2.6-2.6 0-1.72 1.66-3.01 3.37-2.48V9.66c-3.45-.46-6.47 2.22-6.47 5.64 0 3.33 2.76 5.7 5.69 5.7 3.14 0 5.69-2.55 5.69-5.7V9.01a7.35 7.35 0 0 0 4.3 1.38V7.3s-1.88.09-3.24-1.48z"/></svg>
+        </a>
+        <a href="https://lynk.id/zulnandigipreneur" target="_blank" rel="noopener noreferrer" aria-label="Toko Lynk.id">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
+        </a>
+      </div>
+    </div>
   </div>
+  <p class="container footer__copy">&copy; <span data-year>2026</span> Nexamind.ai — Zulnan Fahrizan. Seluruh hak cipta dilindungi.</p>
 </footer>
+
+<!-- CTA lengket di HP -->
+<a class="sticky-cta" href="#produk" data-scroll>
+  Lihat Produk
+  <span>mulai Rp35.000</span>
+</a>
 
 <script src="assets/vendor/motion.min.js" defer></script>
 <script type="module" src="assets/js/main.js"></script>
