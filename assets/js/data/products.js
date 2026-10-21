@@ -97,7 +97,7 @@ export const products = [
   {
     id: "jasa-website",
     kicker: "Jasa Website · Landing Page",
-    name: "Jasa Kilat Pembuatan Landing Page / Website Siap Jualan",
+    name: "Jasa Pembuatan Landing Page / Website Siap Jualan",
     hook: "Produkmu bagus, tapi calon pembeli tidak tahu harus melihat ke mana?",
     story: [
       "Sering kali yang kurang bukan produknya, melainkan tempat untuk memajangnya. Lewat jasa ini kamu mendapat landing page atau website dengan desain custom sesuai brand-mu, tampil rapi di HP maupun laptop, dan siap dipakai jualan.",
